@@ -1,0 +1,3 @@
+---
+- name: Install neovim
+  include_tasks: neovim-{{ ansible_os_family | lower }}.yml

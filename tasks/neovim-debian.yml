@@ -1,0 +1,17 @@
+---
+- name: Add neovim repository
+  ansible.builtin.apt_repository:
+    repo: ppa:neovim-ppa/stable
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+    cache_valid_time: 3600
+  when: ansible_os_family == 'Debian'
+
+- name: Install neovim
+  ansible.builtin.package:
+    name: neovim
+    state: present
