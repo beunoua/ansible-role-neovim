@@ -1,4 +1,4 @@
-Ansible-Role-Zotero
+Ansible-Role-Neovim
 ===================
 
 Installs Neovim.
